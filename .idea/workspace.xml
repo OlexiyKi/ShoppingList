@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e244677d-af68-46e2-a7bf-18898991f636" name="Changes" comment="start project">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="e244677d-af68-46e2-a7bf-18898991f636" name="Changes" comment="add models and migration">
+      <change beforePath="$PROJECT_DIR$/.idea/ShoppingList.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ShoppingList.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoppinglist/shoppinglist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoppinglist/shoppinglist/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoppinglist/slist/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoppinglist/slist/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/shoppinglist/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/shoppinglist/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/shoppinglist/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/shoppinglist/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/shoppinglist/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppinglist/slist/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +44,16 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/PycharmProjects/Hillel/ShoppingList&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/PycharmProjects/Hillel/ShoppingList/shoppinglist/slist&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\PycharmProjects\Hillel\ShoppingList\shoppinglist\slist" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.views">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ShoppingList" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -59,8 +75,52 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="urls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ShoppingList" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/shoppinglist/shoppinglist" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shoppinglist/shoppinglist/urls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ShoppingList" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/shoppinglist/slist" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shoppinglist/slist/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.urls" />
         <item itemvalue="Python.manage" />
       </list>
     </recent_temporary>
@@ -81,7 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676406314418</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add models and migration">
+      <created>1676486575723</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676486575723</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add models and migration">
+      <created>1676486995153</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676486995153</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -89,6 +163,25 @@
       <path value="$PROJECT_DIR$/ShoppingList" />
     </ignored-roots>
     <MESSAGE value="start project" />
-    <option name="LAST_COMMIT_MESSAGE" value="start project" />
+    <MESSAGE value="add models and migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="add models and migration" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/shoppinglist/urls.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
