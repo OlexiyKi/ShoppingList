@@ -3,8 +3,7 @@ from django.db import models
 # Create your models here.
 class ShoppingList(models.Model):
     list_id = models.UUIDField()
-    list_id = models.ForeignKey('Item', on_delete=models.CASCADE)
-    item_id = models.IntegerField()
+    item_id = models.ForeignKey('Item', on_delete=models.CASCADE)
     quantity = models.IntegerField()
     price = models.DecimalField(decimal_places=2, max_digits=10, null=True)
     status = models.CharField(default="available", max_length=20)
