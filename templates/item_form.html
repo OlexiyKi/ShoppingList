@@ -6,7 +6,8 @@
 </head>
 <body>
 <h1> Add item: </h1>
-<form action="/shopping_list/add/" method = 'post'>
+
+<form action="/shopping_list/" method = 'post'>
     {% csrf_token %}
     <input type="text" name="item" placeholder="Item">
     <input type="text" name="amount" placeholder="amount">
@@ -15,9 +16,50 @@
             <option value="{{ shop.id }}">{{ shop.name }}</option>
         {% endfor %}
     </select>
-    <input type="submit" value="Add">
+    <button type="submit" value="Add" name="Add"> Add </button>
+    <br>
 
 
 </form>
+
+
+    <br>
+
+    <h1> Here is your shoppinglist: </h1>
+
+     {% for item in shopping_list_data %}
+        {% if item.status == 'available' %}
+ <form action="/shopping_list/{{ item.item_id.id }}/buy" method = 'post'>
+     {% csrf_token %}
+            <p> {{item.item_id.name}} | {{item.quantity}} | {{item.item_id.shop_id.name}}
+                    <input type="text" name="price" placeholder="price">
+                    <button type="submit" value="done" name="done"> done </button>
+                    <button type="submit" value="remove" name="remove"> remove </button>
+    </p>
+ </form>
+{% endif %}
+{% endfor %}
+
+
+
+
+    <br>
+    <h1> Already bought: </h1>
+{% for item in shopping_list_data %}
+    {% if item.status == 'done' %}
+<form action="/shopping_list/{{ item.item_id.id }}/remove" method = 'post'>
+     {% csrf_token %}
+    <p> {{ item.buy_day }}  |  {{item.item_id.name}}  |  {{item.quantity}}  |  {{item.item_id.shop_id.name}}  |  (Sum {{ item.price }})
+
+        <button type="submit" value="Remove" name="Remove"> Remove </button>
+
+    </p>
+</form>
+{% endif %}
+{% endfor %}
+
+
+
+
 </body>
 </html>

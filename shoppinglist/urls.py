@@ -25,5 +25,5 @@ import slist.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('shopping_list/', include('slist.urls')),
+    path('shopping_list', include('slist.urls')),
 ]
