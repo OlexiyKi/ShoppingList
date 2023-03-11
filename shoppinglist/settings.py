@@ -80,8 +80,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'slist_db',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
+
+        'PASSWORD': 'postgres',  #DB_HOST=pg_db_container -- чтоб развернуть в докере, подключаемся к созданному хосту в докер компоус
+        'HOST': 'pg_db_container',
         'PORT': '5432'
 
     }
