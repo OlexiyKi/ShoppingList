@@ -7,7 +7,8 @@ import datetime
 # Create your views here.  #обработчики єндпоинтов
 def index(request):
     if request.user.is_authenticated:
-        user_list = UserList.objects.filter(user_id=1).first()
+        user_id = request.user.id
+        user_list = UserList.objects.filter(user_id=user_id).first()
         if request.method == "POST":
             if request.POST.get('Add'):                         #кнопка возвращает в POST значение с параметра name="Add"
                 item_name = request.POST.get('item')
