@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 import uuid
@@ -52,7 +52,7 @@ def user_invite(request):
         email = request.POST.get('email')
         invited_user = User.objects.filter(email=email).first()
         if invited_user is None:
-            return HttpResponse('User not found')
+            return HttpResponseNotFound('User not found')
         else:
             invited_user_list = UserList.objects.filter(user_id=invited_user.id).first()
             current_user_list = UserList.objects.filter(user_id=request.user.id).first()   #"user_id=request.user.id" -- request содержит в себе реквизиты текущего юзера

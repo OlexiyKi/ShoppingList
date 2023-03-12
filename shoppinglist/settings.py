@@ -81,8 +81,8 @@ DATABASES = {
         'NAME': 'slist_db',
         'USER': 'postgres',
 
-        'PASSWORD': 'postgres',  #DB_HOST=pg_db_container -- чтоб развернуть в докере, подключаемся к созданному хосту в докер компоус
-        'HOST': 'pg_db_container',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',      #DB_HOST=pg_db_container -- чтоб развернуть в докере, подключаемся к созданному хосту в докер компоус
         'PORT': '5432'
 
     }
