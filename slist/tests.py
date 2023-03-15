@@ -1,3 +1,4 @@
+from django.contrib.auth import login
 from django.test import TestCase
 from .models import UserList, ShoppingList, Item
 from django.contrib.auth.models import User
@@ -83,15 +84,21 @@ class BuyItem(TestCase):
         self.assertEqual('done', shoppinglist_user.status)
 
 
-    # def test_add_itam(self):
-    #     user = Client()
-    #     user.login(username='user1', password='1111')
-    #
-    #     response = user.post("/shopping_list", {'item_name': 'pepper', 'amount': '1', 'shop_id': '1'})
-    #
-    #     added_item = Item.objects.filter(name='pepper').first()
-    #
-    #     self.assertEqual(added_item.name, 'pepper')
+    def test_add_itam(self):
+
+        client = Client()
+        new_user = User.objects.create_user(username='superusr', email='superusr@com', password='1111')
+        new_user.save()
+        #client.login(username='user1', password='1111')
+        client.login(username='superusr', password='1111')
+
+
+
+        response = client.post("/shopping_list/", {'item_name': 'pepper', 'amount': '1', 'shop_id': '1', 'Add': 'Add'})
+        self.assertEqual(response.status_code, 200)
+        added_item = Item.objects.filter(name='pepper').first()
+
+        self.assertEqual(added_item.name, 'pepper')
 
 
 
