@@ -83,7 +83,7 @@ DATABASES = {
         'USER': 'postgres',
 
         'PASSWORD': 'postgres',
-        'HOST': os.environ.get('DB_HOST', '127.0.0.1'),      #DB_HOST=pg_db_container -- чтоб развернуть в докере, подключаемся к созданному хосту в докер компоус
+        'HOST': os.environ.get('DB_HOST', '127.0.0.1'),          #DB_HOST=pg_db_container -- чтоб развернуть в докере, подключаемся к созданному хосту в докер компоус
         'PORT': '5432'
 
     }
